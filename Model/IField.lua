@@ -1,18 +1,24 @@
 IField = {}
 
 function IField:new()
-    function IField:init()
+    local obj = {}
+
+    function obj:Init()
     end
 
-    function IField:tick()
+    function obj:Tick()
     end
 
-    function IField:move()
+    function obj:Move()
     end
 
-    function IField:mix()
+    function obj:Mix()
     end
 
-    function IField:dump()
+    function obj:Dump()
     end
+
+    setmetatable(obj, self)
+    self.__index = self
+    return obj
 end
